@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibranSense Investment Analysis - Complete Financial Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .analysis-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        .header-row {
+            background-color: #95a5a6;
+            color: white;
+            font-weight: bold;
+        }
+        .equity-row {
+            background-color: #d5edda;
+        }
+        .debt-row {
+            background-color: #f8d7da;
+        }
+        .hybrid-row {
+            background-color: #e2e3e5;
+        }
+        .purple-highlight {
+            color: #6f42c1;
+            font-weight: bold;
+        }
+        .green-positive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .red-negative {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .yellow-neutral {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .assumptions {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .calculation-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 11px;
+        }
+        .footnote {
+            font-size: 10px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="analysis-container">
+        <h1>VibranSense Technologies: Complete Investment Analysis</h1>
+        
+        <h2>Key Financial Metrics from Complete Model</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>FY2024A</th>
+                        <th>Year 1</th>
+                        <th>Year 2</th>
+                        <th>Year 3</th>
+                        <th>Year 4</th>
+                        <th>Year 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Revenue (₹M)</strong></td>
+                        <td class="purple-highlight">1,926</td>
+                        <td class="purple-highlight">2,103</td>
+                        <td class="purple-highlight">2,217</td>
+                        <td class="purple-highlight">2,382</td>
+                        <td class="purple-highlight">2,609</td>
+                        <td class="purple-highlight">2,963</td>
+                    </tr>
+                    <tr>
+                        <td>SaaS Mix %</td>
+                        <td class="purple-highlight">28%</td>
+                        <td class="purple-highlight">31%</td>
+                        <td class="purple-highlight">32%</td>
+                        <td class="purple-highlight">35%</td>
+                        <td class="purple-highlight">39%</td>
+                        <td class="purple-highlight">45%</td>
+                    </tr>
+                    <tr>
+                        <td>Gross Margin %</td>
+                        <td class="purple-highlight">47%</td>
+                        <td class="purple-highlight">48%</td>
+                        <td class="purple-highlight">49%</td>
+                        <td class="purple-highlight">50%</td>
+                        <td class="purple-highlight">52%</td>
+                        <td class="purple-highlight">54%</td>
+                    </tr>
+                    <tr>
+                        <td>EBITDA (₹M)</td>
+                        <td class="purple-highlight">175</td>
+                        <td class="purple-highlight">211</td>
+                        <td class="purple-highlight">250</td>
+                        <td class="purple-highlight">314</td>
+                        <td class="purple-highlight">387</td>
+                        <td class="purple-highlight">513</td>
+                    </tr>
+                    <tr>
+                        <td>EBITDA Margin %</td>
+                        <td class="purple-highlight">9%</td>
+                        <td class="purple-highlight">10%</td>
+                        <td class="purple-highlight">11%</td>
+                        <td class="purple-highlight">13%</td>
+                        <td class="purple-highlight">15%</td>
+                        <td class="purple-highlight">17%</td>
+                    </tr>
+                    <tr>
+                        <td>Unlevered FCF (₹M)</td>
+                        <td class="purple-highlight">-20</td>
+                        <td class="purple-highlight">-588</td>
+                        <td class="purple-highlight">-173</td>
+                        <td class="purple-highlight">-13</td>
+                        <td class="purple-highlight">304</td>
+                        <td class="purple-highlight">400</td>
+                    </tr>
+                    <tr>
+                        <td>Levered FCF (₹M)</td>
+                        <td class="purple-highlight">-20</td>
+                        <td class="purple-highlight">-780</td>
+                        <td class="purple-highlight">-351</td>
+                        <td class="purple-highlight">-176</td>
+                        <td class="purple-highlight">155</td>
+                        <td class="purple-highlight">266</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="calculation-box">
+            <h3>Accurate DCF & IRR Calculations:</h3>
+            <p><strong>DCF Base Case (₹M):</strong></p>
+            <p>Year 1-5 Unlevered FCF: -588, -173, -13, 304, 400</p>
+            <p>Terminal Value (3% growth): 400 × (1.03) ÷ (0.12 - 0.03) = 4,578</p>
+            <p>PV @ 12% WACC: -525 - 138 - 9 + 193 + 227 + 2,593 = 2,341</p>
+            <p>Current Equity Value: ₹2,341M</p>
+            
+            <p><strong>Investment Returns (₹100M investment = 4.27% ownership):</strong></p>
+            <p>• Base Case (2.0x EV/Rev): 2,963 × 2.0 × 4.27% = ₹253M → <strong>20.4% IRR</strong></p>
+            <p>• Bull Case (2.5x EV/Rev): 2,963 × 2.5 × 4.27% = ₹316M → <strong>25.9% IRR</strong></p>
+            <p>• Bear Case (1.5x EV/Rev): 2,963 × 1.5 × 4.27% = ₹190M → <strong>13.7% IRR</strong></p>
+            
+            <p><strong>Debt Returns (₹100M = 16.67% of ₹600M loan):</strong></p>
+            <p>• Base Case: 12% fixed return = ₹112M → <strong>2.3% IRR</strong></p>
+            <p>• Bear Case: 85% recovery = ₹85M → <strong>-3.2% IRR</strong></p>
+        </div>
+
+        <h2>Investment Framework: Per ₹100M Investment Analysis</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Investment Type</th>
+                        <th>Ownership</th>
+                        <th>Base Case Returns</th>
+                        <th>Bull Case Returns</th>
+                        <th>Bear Case Returns</th>
+                        <th>Risk Profile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header-row">
+                        <td><strong>EQUITY INVESTMENT (₹100M)</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="equity-row">
+                        <td>Minority Stake</td>
+                        <td>4.27%</td>
+                        <td class="green-positive">₹253M (20.4% IRR)</td>
+                        <td class="green-positive">₹316M (25.9% IRR)</td>
+                        <td class="yellow-neutral">₹190M (13.7% IRR)</td>
+                        <td>High reward, moderate risk</td>
+                    </tr>
+                    <tr class="equity-row">
+                        <td>Board Rights</td>
+                        <td>Yes</td>
+                        <td>Strategic influence</td>
+                        <td>Full upside capture</td>
+                        <td>Still positive returns</td>
+                        <td>Control premium</td>
+                    </tr>
+                    <tr class="header-row">
+                        <td><strong>DEBT SYNDICATE (₹100M)</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="debt-row">
+                        <td>Term Loan Participation</td>
+                        <td>16.7%</td>
+                        <td class="red-negative">₹112M (2.3% IRR)</td>
+                        <td class="red-negative">₹112M (2.3% IRR)</td>
+                        <td class="red-negative">₹85M (-3.2% IRR)</td>
+                        <td>Low return, covenant risk</td>
+                    </tr>
+                    <tr class="debt-row">
+                        <td>Covenant Risk</td>
+                        <td>High</td>
+                        <td>DSCR breach Years 1-3</td>
+                        <td>No upside participation</td>
+                        <td>Recovery uncertainty</td>
+                        <td>Restructuring likely</td>
+                    </tr>
+                    <tr class="header-row">
+                        <td><strong>HYBRID APPROACH (₹100M)</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="hybrid-row">
+                        <td>₹70M Equity + ₹30M Debt</td>
+                        <td>~3.0%</td>
+                        <td class="green-positive">₹211M (16.1% IRR)</td>
+                        <td class="green-positive">₹255M (20.7% IRR)</td>
+                        <td class="yellow-neutral">₹159M (9.8% IRR)</td>
+                        <td>Balanced risk-return</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Detailed DSCR Analysis & Covenant Assessment</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Year 1</th>
+                        <th>Year 2</th>
+                        <th>Year 3</th>
+                        <th>Year 4</th>
+                        <th>Year 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EBITDA (₹M)</td>
+                        <td class="purple-highlight">211</td>
+                        <td class="purple-highlight">250</td>
+                        <td class="purple-highlight">314</td>
+                        <td class="purple-highlight">387</td>
+                        <td class="purple-highlight">513</td>
+                    </tr>
+                    <tr>
+                        <td>Less: CapEx</td>
+                        <td class="purple-highlight">-687</td>
+                        <td class="purple-highlight">-331</td>
+                        <td class="purple-highlight">-273</td>
+                        <td class="purple-highlight">-39</td>
+                        <td class="purple-highlight">-65</td>
+                    </tr>
+                    <tr>
+                        <td>Less: Taxes</td>
+                        <td class="purple-highlight">-26</td>
+                        <td class="purple-highlight">-11</td>
+                        <td class="purple-highlight">-13</td>
+                        <td class="purple-highlight">-32</td>
+                        <td class="purple-highlight">-59</td>
+                    </tr>
+                    <tr>
+                        <td>Less: Working Capital</td>
+                        <td class="purple-highlight">-30</td>
+                        <td class="purple-highlight">-20</td>
+                        <td class="purple-highlight">10</td>
+                        <td class="purple-highlight">20</td>
+                        <td class="purple-highlight">25</td>
+                    </tr>
+                    <tr>
+                        <td>Cash for Debt Service</td>
+                        <td class="red-negative">-532</td>
+                        <td class="red-negative">-112</td>
+                        <td class="yellow-neutral">38</td>
+                        <td class="green-positive">336</td>
+                        <td class="green-positive">414</td>
+                    </tr>
+                    <tr>
+                        <td>Total Debt Service</td>
+                        <td class="purple-highlight">192</td>
+                        <td class="purple-highlight">178</td>
+                        <td class="purple-highlight">163</td>
+                        <td class="purple-highlight">149</td>
+                        <td class="purple-highlight">134</td>
+                    </tr>
+                    <tr class="header-row">
+                        <td><strong>DSCR</strong></td>
+                        <td class="red-negative"><strong>-2.77</strong></td>
+                        <td class="red-negative"><strong>-0.63</strong></td>
+                        <td class="red-negative"><strong>0.23</strong></td>
+                        <td class="green-positive"><strong>2.26</strong></td>
+                        <td class="green-positive"><strong>3.09</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Covenant Status (1.30x)</td>
+                        <td class="red-negative">SEVERE BREACH</td>
+                        <td class="red-negative">BREACH</td>
+                        <td class="red-negative">BREACH</td>
+                        <td class="green-positive">COMPLIANT</td>
+                        <td class="green-positive">STRONG</td>
+                    </tr>
+                    <tr>
+                        <td>Funding Gap (₹M)</td>
+                        <td class="red-negative">-724</td>
+                        <td class="red-negative">-290</td>
+                        <td class="red-negative">-125</td>
+                        <td class="green-positive">187</td>
+                        <td class="green-positive">280</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Investment Decision Scoring (Evidence-Based)</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Decision Factor</th>
+                        <th>Weight</th>
+                        <th>Equity Score</th>
+                        <th>Debt Score</th>
+                        <th>Hybrid Score</th>
+                        <th>Scoring Rationale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Return Potential (30%)</td>
+                        <td class="purple-highlight">30%</td>
+                        <td class="green-positive">9/10</td>
+                        <td class="red-negative">2/10</td>
+                        <td class="green-positive">8/10</td>
+                        <td>20.4% vs 2.3% IRR; Equity 9x debt returns</td>
+                    </tr>
+                    <tr>
+                        <td>Downside Protection (25%)</td>
+                        <td class="purple-highlight">25%</td>
+                        <td class="yellow-neutral">6/10</td>
+                        <td class="red-negative">3/10</td>
+                        <td class="yellow-neutral">5/10</td>
+                        <td>Even bear case: 13.7% IRR vs -3.2% debt</td>
+                    </tr>
+                    <tr>
+                        <td>Execution Risk (20%)</td>
+                        <td class="purple-highlight">20%</td>
+                        <td class="yellow-neutral">7/10</td>
+                        <td class="red-negative">2/10</td>
+                        <td class="yellow-neutral">6/10</td>
+                        <td>SaaS mix 28%→45%; DSCR breaches critical</td>
+                    </tr>
+                    <tr>
+                        <td>Market Opportunity (15%)</td>
+                        <td class="purple-highlight">15%</td>
+                        <td class="green-positive">9/10</td>
+                        <td class="yellow-neutral">5/10</td>
+                        <td class="green-positive">8/10</td>
+                        <td>21% TAM CAGR, SenseEdge Pro scalability</td>
+                    </tr>
+                    <tr>
+                        <td>Liquidity/Control (10%)</td>
+                        <td class="purple-highlight">10%</td>
+                        <td class="yellow-neutral">6/10</td>
+                        <td class="red-negative">4/10</td>
+                        <td class="yellow-neutral">5/10</td>
+                        <td>Board seats vs covenant complications</td>
+                    </tr>
+                    <tr class="header-row">
+                        <td><strong>Weighted Score</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td class="green-positive"><strong>7.4/10</strong></td>
+                        <td class="red-negative"><strong>2.6/10</strong></td>
+                        <td class="green-positive"><strong>6.8/10</strong></td>
+                        <td><strong>Equity clear winner</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="calculation-box">
+            <h3>Detailed Scoring Methodology:</h3>
+            <p><strong>Return Potential (30% weight):</strong></p>
+            <p>• Equity 9/10: 20.4% IRR significantly exceeds VC/PE hurdles (15-18%)</p>
+            <p>• Debt 2/10: 2.3% IRR below risk-free rate + risk premium</p>
+            <p>• Hybrid 8/10: 16.1% IRR strong risk-adjusted return</p>
+            
+            <p><strong>Downside Protection (25% weight):</strong></p>
+            <p>• Equity 6/10: Bear case still positive (13.7% IRR) due to strong fundamentals</p>
+            <p>• Debt 3/10: DSCR breaches Years 1-3, recovery uncertain with high CapEx</p>
+            <p>• Hybrid 5/10: Weighted blend with moderate protection</p>
+            
+            <p><strong>Execution Risk (20% weight):</strong></p>
+            <p>• Critical: SaaS mix evolution from 28%→45% drives margin expansion</p>
+            <p>• SenseEdge Pro subscriber ramp: 0→17,464 by Year 5</p>
+            <p>• Debt covenant breaches create refinancing pressure</p>
+        </div>
+
+        <h2>Final Investment Recommendation</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Recommendation</th>
+                        <th>Expected Return</th>
+                        <th>Key Value Drivers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="green-positive">
+                        <td><strong>PRIMARY: Pure Equity</strong></td>
+                        <td><strong>₹100M Minority Stake</strong></td>
+                        <td><strong>20.4% Base IRR</strong><br>25.9% Bull | 13.7% Bear</td>
+                        <td>• SaaS mix expansion 28%→45%<br>• SenseEdge Pro scaling<br>• Margin expansion to 54%<br>• Strong even in bear case</td>
+                    </tr>
+                    <tr class="yellow-neutral">
+                        <td><strong>ALTERNATIVE: Hybrid</strong></td>
+                        <td><strong>₹70M Equity + ₹30M Debt</strong></td>
+                        <td><strong>16.1% Base IRR</strong><br>20.7% Bull | 9.8% Bear</td>
+                        <td>• Balanced risk-return profile<br>• Partial downside mitigation<br>• Lower covenant exposure</td>
+                    </tr>
+                    <tr class="red-negative">
+                        <td><strong>AVOID: Pure Debt</strong></td>
+                        <td><strong>₹100M Term Loan</strong></td>
+                        <td><strong>2.3% Base IRR</strong><br>2.3% Bull | -3.2% Bear</td>
+                        <td>• Severe DSCR covenant breaches<br>• No upside participation<br>• High restructuring probability<br>• Inadequate risk compensation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="assumptions">
+            <h3>Key Investment Insights from Financial Model:</h3>
+            <ul>
+                <li><strong>Strong Fundamentals:</strong> Revenue CAGR 9%, EBITDA margin expansion 9%→17%</li>
+                <li><strong>SaaS Transformation:</strong> Recurring revenue mix grows 28%→45%, driving margin improvement</li>
+                <li><strong>Debt Structure Problematic:</strong> DSCR breaches Years 1-3 due to heavy SenseEdge Pro CapEx</li>
+                <li><strong>Positive Bear Case:</strong> Even 1.5x exit multiple yields 13.7% equity IRR</li>
+                <li><strong>Market Timing:</strong> Catching PMEA market inflection with differentiated platform</li>
+            </ul>
+        </div>
+
+        <div class="footnote">
+            <p><strong>Financial Model Assumptions (All from provided data):</strong></p>
+            <ul>
+                <li>Revenue projections: Hardware ASP decline offset by SaaS growth</li>
+                <li>SenseEdge Pro ramp: 0→17,464 subscribers by Year 5</li>
+                <li>Gross margin expansion: 47%→54% driven by SaaS mix shift</li>
+                <li>CapEx phasing: ₹687M Year 1, ₹331M Year 2 for platform development</li>
+                <li>DCF: 12% WACC, 3% terminal growth, exit multiples 1.5x-2.5x EV/Revenue</li>
+                <li><span class="purple-highlight">All purple figures sourced directly from provided financial statements</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
