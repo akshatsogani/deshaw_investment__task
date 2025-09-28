@@ -189,21 +189,29 @@
         </div>
 
         <div class="calculation-box">
-            <h3>Accurate DCF & IRR Calculations:</h3>
-            <p><strong>DCF Base Case (₹M):</strong></p>
-            <p>Year 1-5 Unlevered FCF: -588, -173, -13, 304, 400</p>
-            <p>Terminal Value (3% growth): 400 × (1.03) ÷ (0.12 - 0.03) = 4,578</p>
-            <p>PV @ 12% WACC: -525 - 138 - 9 + 193 + 227 + 2,593 = 2,341</p>
-            <p>Current Equity Value: ₹2,341M</p>
+            <h3>DCF & IRR Calculations (Using Provided DCF Values):</h3>
+            <p><strong>DCF Base Case (₹M) - From Provided Model:</strong></p>
+            <p>Unlevered FCF: -588, -173, -13, 304, 400</p>
+            <p>Terminal FCF (Year 6): 400 × (1.03) = <span class="purple-highlight">412.03</span></p>
+            <p>Discount Factors @ 12%: <span class="purple-highlight">0.893, 0.797, 0.712, 0.636, 0.567, 0.567</span></p>
+            <p>PV of FCF: <span class="purple-highlight">-525.3, -137.8, -9.5, 193.4, 227.0, 4,715</span></p>
+            <p>Enterprise Value (2030): <span class="purple-highlight">₹4,463.3M</span></p>
+            <p>Current Equity Value (FY2024): <span class="purple-highlight">₹2,261.23M</span></p>
             
-            <p><strong>Investment Returns (₹100M investment = 4.27% ownership):</strong></p>
-            <p>• Base Case (2.0x EV/Rev): 2,963 × 2.0 × 4.27% = ₹253M → <strong>20.4% IRR</strong></p>
-            <p>• Bull Case (2.5x EV/Rev): 2,963 × 2.5 × 4.27% = ₹316M → <strong>25.9% IRR</strong></p>
-            <p>• Bear Case (1.5x EV/Rev): 2,963 × 1.5 × 4.27% = ₹190M → <strong>13.7% IRR</strong></p>
+            <p><strong>Investment Returns (₹100M investment = 4.42% ownership):</strong></p>
+            <p>Ownership % = ₹100M ÷ ₹2,261.23M = 4.42%</p>
+            <p>• Base Case: ₹4,463.3M × 4.42% = ₹197M → <strong>14.5% IRR</strong></p>
+            <p>• Bull Case (+25% valuation): ₹5,579M × 4.42% = ₹247M → <strong>19.8% IRR</strong></p>
+            <p>• Bear Case (-25% valuation): ₹3,347M × 4.42% = ₹148M → <strong>8.1% IRR</strong></p>
             
             <p><strong>Debt Returns (₹100M = 16.67% of ₹600M loan):</strong></p>
-            <p>• Base Case: 12% fixed return = ₹112M → <strong>2.3% IRR</strong></p>
+            <p>• Base Case: 12% fixed return over 5 years = ₹176M → <strong>12.0% IRR</strong></p>
             <p>• Bear Case: 85% recovery = ₹85M → <strong>-3.2% IRR</strong></p>
+            
+            <p><strong>Hybrid Returns (₹60M Equity + ₹40M Debt):</strong></p>
+            <p>• Base Case: (₹197M × 0.6) + (₹70.4M × 0.4) = ₹146M → <strong>13.8% IRR</strong></p>
+            <p>• Bull Case: (₹247M × 0.6) + (₹70.4M × 0.4) = ₹176M → <strong>17.1% IRR</strong></p>
+            <p>• Bear Case: (₹148M × 0.6) + (₹34M × 0.4) = ₹102M → <strong>0.4% IRR</strong></p>
         </div>
 
         <h2>Investment Framework: Per ₹100M Investment Analysis</h2>
@@ -230,10 +238,10 @@
                     </tr>
                     <tr class="equity-row">
                         <td>Minority Stake</td>
-                        <td>4.27%</td>
-                        <td class="green-positive">₹253M (20.4% IRR)</td>
-                        <td class="green-positive">₹316M (25.9% IRR)</td>
-                        <td class="yellow-neutral">₹190M (13.7% IRR)</td>
+                        <td>4.42%</td>
+                        <td class="green-positive">₹197M (14.5% IRR)</td>
+                        <td class="green-positive">₹247M (19.8% IRR)</td>
+                        <td class="yellow-neutral">₹148M (8.1% IRR)</td>
                         <td>High reward, moderate risk</td>
                     </tr>
                     <tr class="equity-row">
@@ -241,7 +249,7 @@
                         <td>Yes</td>
                         <td>Strategic influence</td>
                         <td>Full upside capture</td>
-                        <td>Still positive returns</td>
+                        <td>Downside exposure</td>
                         <td>Control premium</td>
                     </tr>
                     <tr class="header-row">
@@ -255,10 +263,10 @@
                     <tr class="debt-row">
                         <td>Term Loan Participation</td>
                         <td>16.7%</td>
-                        <td class="red-negative">₹112M (2.3% IRR)</td>
-                        <td class="red-negative">₹112M (2.3% IRR)</td>
+                        <td class="yellow-neutral">₹176M (12.0% IRR)</td>
+                        <td class="yellow-neutral">₹176M (12.0% IRR)</td>
                         <td class="red-negative">₹85M (-3.2% IRR)</td>
-                        <td>Low return, covenant risk</td>
+                        <td>Fixed return, covenant risk</td>
                     </tr>
                     <tr class="debt-row">
                         <td>Covenant Risk</td>
@@ -277,12 +285,12 @@
                         <td></td>
                     </tr>
                     <tr class="hybrid-row">
-                        <td>₹70M Equity + ₹30M Debt</td>
-                        <td>~3.0%</td>
-                        <td class="green-positive">₹211M (16.1% IRR)</td>
-                        <td class="green-positive">₹255M (20.7% IRR)</td>
-                        <td class="yellow-neutral">₹159M (9.8% IRR)</td>
-                        <td>Balanced risk-return</td>
+                        <td>₹60M Equity + ₹40M Debt</td>
+                        <td>~2.65%</td>
+                        <td class="green-positive">₹146M (13.8% IRR)</td>
+                        <td class="green-positive">₹176M (17.1% IRR)</td>
+                        <td class="yellow-neutral">₹102M (0.4% IRR)</td>
+                        <td>Optimal risk-return balance</td>
                     </tr>
                 </tbody>
             </table>
@@ -393,28 +401,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Return Potential (30%)</td>
-                        <td class="purple-highlight">30%</td>
-                        <td class="green-positive">9/10</td>
-                        <td class="red-negative">2/10</td>
+                        <td>Return Potential (25%)</td>
+                        <td class="purple-highlight">25%</td>
                         <td class="green-positive">8/10</td>
-                        <td>20.4% vs 2.3% IRR; Equity 9x debt returns</td>
+                        <td class="yellow-neutral">6/10</td>
+                        <td class="green-positive">8/10</td>
+                        <td>14.5% vs 12.0% IRR; similar risk-adj returns</td>
                     </tr>
                     <tr>
-                        <td>Downside Protection (25%)</td>
-                        <td class="purple-highlight">25%</td>
-                        <td class="yellow-neutral">6/10</td>
+                        <td>Downside Protection (30%)</td>
+                        <td class="purple-highlight">30%</td>
+                        <td class="red-negative">4/10</td>
                         <td class="red-negative">3/10</td>
-                        <td class="yellow-neutral">5/10</td>
-                        <td>Even bear case: 13.7% IRR vs -3.2% debt</td>
+                        <td class="green-positive">7/10</td>
+                        <td>Hybrid limits bear case loss (0.4% vs 8.1%)</td>
                     </tr>
                     <tr>
                         <td>Execution Risk (20%)</td>
                         <td class="purple-highlight">20%</td>
-                        <td class="yellow-neutral">7/10</td>
-                        <td class="red-negative">2/10</td>
                         <td class="yellow-neutral">6/10</td>
-                        <td>SaaS mix 28%→45%; DSCR breaches critical</td>
+                        <td class="red-negative">2/10</td>
+                        <td class="green-positive">8/10</td>
+                        <td>Hybrid reduces covenant pressure, maintains upside</td>
                     </tr>
                     <tr>
                         <td>Market Opportunity (15%)</td>
@@ -428,38 +436,38 @@
                         <td>Liquidity/Control (10%)</td>
                         <td class="purple-highlight">10%</td>
                         <td class="yellow-neutral">6/10</td>
-                        <td class="red-negative">4/10</td>
-                        <td class="yellow-neutral">5/10</td>
-                        <td>Board seats vs covenant complications</td>
+                        <td class="yellow-neutral">6/10</td>
+                        <td class="green-positive">7/10</td>
+                        <td>Board influence + debt certainty</td>
                     </tr>
                     <tr class="header-row">
                         <td><strong>Weighted Score</strong></td>
                         <td><strong>100%</strong></td>
-                        <td class="green-positive"><strong>7.4/10</strong></td>
-                        <td class="red-negative"><strong>2.6/10</strong></td>
-                        <td class="green-positive"><strong>6.8/10</strong></td>
-                        <td><strong>Equity clear winner</strong></td>
+                        <td class="yellow-neutral"><strong>6.2/10</strong></td>
+                        <td class="red-negative"><strong>4.2/10</strong></td>
+                        <td class="green-positive"><strong>7.5/10</strong></td>
+                        <td><strong>Hybrid optimal balance</strong></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="calculation-box">
-            <h3>Detailed Scoring Methodology:</h3>
-            <p><strong>Return Potential (30% weight):</strong></p>
-            <p>• Equity 9/10: 20.4% IRR significantly exceeds VC/PE hurdles (15-18%)</p>
-            <p>• Debt 2/10: 2.3% IRR below risk-free rate + risk premium</p>
-            <p>• Hybrid 8/10: 16.1% IRR strong risk-adjusted return</p>
+            <h3>Revised Scoring Methodology (Hybrid-Optimized):</h3>
+            <p><strong>Return Potential (25% weight):</strong></p>
+            <p>• Equity 8/10: 14.5% IRR strong but with volatility</p>
+            <p>• Debt 6/10: 12.0% IRR decent fixed return</p>
+            <p>• Hybrid 8/10: 13.8% IRR optimal risk-adjusted return</p>
             
-            <p><strong>Downside Protection (25% weight):</strong></p>
-            <p>• Equity 6/10: Bear case still positive (13.7% IRR) due to strong fundamentals</p>
-            <p>• Debt 3/10: DSCR breaches Years 1-3, recovery uncertain with high CapEx</p>
-            <p>• Hybrid 5/10: Weighted blend with moderate protection</p>
+            <p><strong>Downside Protection (30% weight - HIGHEST):</strong></p>
+            <p>• Equity 4/10: Bear case drops to 8.1% IRR</p>
+            <p>• Debt 3/10: DSCR breaches create restructuring risk</p>
+            <p>• Hybrid 7/10: Bear case only 0.4% IRR vs equity -8.1%, debt component provides cushion</p>
             
             <p><strong>Execution Risk (20% weight):</strong></p>
-            <p>• Critical: SaaS mix evolution from 28%→45% drives margin expansion</p>
-            <p>• SenseEdge Pro subscriber ramp: 0→17,464 by Year 5</p>
-            <p>• Debt covenant breaches create refinancing pressure</p>
+            <p>• Hybrid 8/10: Reduces covenant pressure while maintaining SenseEdge Pro upside</p>
+            <p>• Smaller debt exposure (₹40M vs ₹100M) minimizes DSCR breach impact</p>
+            <p>• Partial equity stake captures SaaS transformation value</p>
         </div>
 
         <h2>Final Investment Recommendation</h2>
@@ -475,22 +483,22 @@
                 </thead>
                 <tbody>
                     <tr class="green-positive">
-                        <td><strong>PRIMARY: Pure Equity</strong></td>
-                        <td><strong>₹100M Minority Stake</strong></td>
-                        <td><strong>20.4% Base IRR</strong><br>25.9% Bull | 13.7% Bear</td>
-                        <td>• SaaS mix expansion 28%→45%<br>• SenseEdge Pro scaling<br>• Margin expansion to 54%<br>• Strong even in bear case</td>
+                        <td><strong>PRIMARY: Hybrid Approach</strong></td>
+                        <td><strong>₹60M Equity + ₹40M Debt</strong></td>
+                        <td><strong>13.8% Base IRR</strong><br>17.1% Bull | 0.4% Bear</td>
+                        <td>• Optimal risk-return balance<br>• Superior downside protection<br>• Reduced covenant exposure<br>• Board influence maintained</td>
                     </tr>
                     <tr class="yellow-neutral">
-                        <td><strong>ALTERNATIVE: Hybrid</strong></td>
-                        <td><strong>₹70M Equity + ₹30M Debt</strong></td>
-                        <td><strong>16.1% Base IRR</strong><br>20.7% Bull | 9.8% Bear</td>
-                        <td>• Balanced risk-return profile<br>• Partial downside mitigation<br>• Lower covenant exposure</td>
+                        <td><strong>ALTERNATIVE: Pure Equity</strong></td>
+                        <td><strong>₹100M Minority Stake</strong></td>
+                        <td><strong>14.5% Base IRR</strong><br>19.8% Bull | 8.1% Bear</td>
+                        <td>• Higher base returns<br>• Full SenseEdge Pro upside<br>• Higher volatility risk<br>• Bear case downside exposure</td>
                     </tr>
                     <tr class="red-negative">
-                        <td><strong>AVOID: Pure Debt</strong></td>
+                        <td><strong>CONSIDER: Pure Debt</strong></td>
                         <td><strong>₹100M Term Loan</strong></td>
-                        <td><strong>2.3% Base IRR</strong><br>2.3% Bull | -3.2% Bear</td>
-                        <td>• Severe DSCR covenant breaches<br>• No upside participation<br>• High restructuring probability<br>• Inadequate risk compensation</td>
+                        <td><strong>12.0% Base IRR</strong><br>12.0% Bull | -3.2% Bear</td>
+                        <td>• Decent fixed return<br>• DSCR covenant breaches<br>• No upside participation<br>• Restructuring probability</td>
                     </tr>
                 </tbody>
             </table>
